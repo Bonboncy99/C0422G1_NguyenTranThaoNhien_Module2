@@ -1,4 +1,6 @@
-package ss5_accessmodifier_static.bai_tap;
+package ss5_accessmodifier_static.bai_tap.circle;
+
+import ss5_accessmodifier_static.bai_tap.circle.Circle;
 
 public class TestCircle {
     public static void main(String[] args) {

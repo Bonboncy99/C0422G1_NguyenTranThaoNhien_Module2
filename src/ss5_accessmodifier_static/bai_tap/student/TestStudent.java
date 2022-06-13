@@ -1,5 +1,7 @@
-package ss5_accessmodifier_static.bai_tap;
+package ss5_accessmodifier_static.bai_tap.student;
 
+
+import ss5_accessmodifier_static.bai_tap.student.Student;
 
 public class TestStudent {
     public static void main(String[] args) {
