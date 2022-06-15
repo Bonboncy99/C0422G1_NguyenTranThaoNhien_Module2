@@ -20,11 +20,16 @@ public class Run {
         }
         double percent = (Math.floor(Math.random()*101))/100;
         System.out.println(percent + "%");
+
         System.out.println("Sau khi thay đổi kích thước");
 
         for (Shape shape: shapes) {
-            if (shape instanceof Resizeable)
-        }
+            if (shape instanceof Resizeable){
+                ((Resizeable) shape).resize(percent);
+                System.out.println("Hình vẽ " + shape);
+                System.out.println("Diện tích: "+ shape.getArea());
+            }
 
+        }
     }
 }
