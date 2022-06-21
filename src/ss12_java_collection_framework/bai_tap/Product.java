@@ -47,14 +47,14 @@ public class Product implements Comparable<Product>{
                 '}';
     }
 
-    @Override
-    public int compareTo(Product o) {
-        if (this.price > o.getPrice()){
-            return -1;
-        } else if (this.price < o.getPrice()) {
-            return 1;
-        } else {
-            return 0;
+        @Override
+        public int compareTo(Product o) {
+            if (this.price > o.getPrice()){
+                return -1;
+            } else if (this.price < o.getPrice()) {
+                return 1;
+            } else {
+                return 0;
+            }
         }
-    }
 }
