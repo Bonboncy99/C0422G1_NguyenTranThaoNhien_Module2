@@ -1,9 +1,11 @@
-package ss12_java_collection_framework.bai_tap;
+package ss12_java_collection_framework.bai_tap.controller;
+
+import ss12_java_collection_framework.bai_tap.Service.ProductManager;
 
 import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) {
+public class MainController {
+    public static void DisplayMenu() {
         Scanner scanner = new Scanner(System.in);
         ProductManager productManager = new ProductManager();
         int choice;
@@ -39,8 +41,8 @@ public class Main {
                     productManager.seachByName();
                     break;
                 case 6:
-                    System.out.println("6. Chức năng sắp xếp giá giảm dần");
-                    productManager.sortIncrease();
+                    System.out.println("6. Chức năng sắp xếp giá");
+                    productManager.sort();
                     break;
                 case 7:
                     System.exit(7);
@@ -48,6 +50,5 @@ public class Main {
                     System.out.println("Nhập sai, chọn lại");
             }
         } while (choice != 7);
-
     }
 }

@@ -1,5 +1,8 @@
 package ss12_java_collection_framework.bai_tap;
 
+import ss12_java_collection_framework.bai_tap.Comparable.Ascending;
+import ss12_java_collection_framework.bai_tap.Comparable.Descending;
+
 import java.util.*;
 
 public class ProductManager {
@@ -101,10 +104,17 @@ public class ProductManager {
         }
     }
 
-    public void sortIncrease() {
-        Collections.sort(products);
-        System.out.println("Mảng sau khi sắp xếp là:");
+    public void sort(){
+        System.out.println("CHọn kiểu sắp xếp (1,Tăng dần; 2,Giảm dần):");
+        int chooseSort = Integer.parseInt(scanner.nextLine());
+        if (chooseSort ==1){
+            Collections.sort(products,new Ascending());
+        } else if (chooseSort == 2){
+            Collections.sort(products,new Descending());
+        }
         display();
     }
+
+
 }
 
