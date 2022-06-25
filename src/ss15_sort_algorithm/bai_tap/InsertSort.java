@@ -1,8 +1,9 @@
-package ss15_sort_algorithm.thuc_hanh.bai_tap;
+package ss15_sort_algorithm.bai_tap;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
-public class InsertSortByStep {
+public class InsertSort {
     static int[] list = {2, 3, 2, 5, 6, 1, -2, 3, 14, 12};
     private static void insertionSort(int[] arr) {
         int pos;
@@ -15,7 +16,6 @@ public class InsertSortByStep {
                 pos--;
             }
             arr[pos] = x;
-            System.out.println(Arrays.toString(arr));
         }
     }
     public static void main(String[] args) {
