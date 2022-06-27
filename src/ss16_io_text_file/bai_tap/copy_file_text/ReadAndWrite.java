@@ -1,9 +1,10 @@
 package ss16_io_text_file.bai_tap.copy_file_text;
 
 import java.io.*;
+import java.util.List;
 
 public class ReadAndWrite {
-    public String readFile1 (boolean append, String filePath){
+    public String readFile1(boolean append, String filePath) {
         File file = new File(filePath);
         FileReader fileReader = null;
         BufferedReader bufferedReader = null;
@@ -24,7 +25,7 @@ public class ReadAndWrite {
         return str;
     }
 
-    public void writeFile2 (String str, boolean append){
+    public void writeFile2(String str, boolean append) {
         File file = new File("src/ss16_io_text_file/bai_tap/copy_file_text/file2.txt");
         FileWriter fileWriter = null;
         BufferedWriter bufferedWriter = null;
@@ -33,9 +34,18 @@ public class ReadAndWrite {
             fileWriter = new FileWriter(file, append);
             bufferedWriter = new BufferedWriter(fileWriter);
             bufferedWriter.write(str);
+            bufferedWriter.newLine();
             bufferedWriter.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+//
+//    public int countChar(List<String> arr) {
+//        int count = 0;
+//        for (String str : arr) {
+//            count += str.length();
+//        }
+//        return count;
+//    }
 }

@@ -15,6 +15,7 @@ public class WriteFile1 {
             fileWriter = new FileWriter(file,append);
             bufferedWriter = new BufferedWriter(fileWriter);
             bufferedWriter.write(str);
+            bufferedWriter.newLine();
             bufferedWriter.close();
         } catch (IOException e) {
             e.printStackTrace();
